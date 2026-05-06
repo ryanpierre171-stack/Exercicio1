@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Ex6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double saldo = 1000;
+        int op = 0;
+
+        while (op != 4) {
+            op = sc.nextInt();
+
+            if (op == 1) {
+                double dep = sc.nextDouble();
+                if (dep > 0) saldo += dep;
+
+            } else if (op == 2) {
+                double saque = sc.nextDouble();
+                if (saque > 0 && saque <= saldo) saldo -= saque;
+
+            } else if (op == 3) {
+                System.out.println(saldo);
+            }
+        }
+
+        System.out.println("Saldo final: " + saldo);
+
+        sc.close();
+    }
+}
