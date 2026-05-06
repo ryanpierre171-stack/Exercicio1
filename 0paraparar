@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Ex5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int num = sc.nextInt();
+        int maior = num;
+        int menor = num;
+
+        while (num != 0) {
+            if (num > maior) maior = num;
+            if (num < menor) menor = num;
+
+            num = sc.nextInt();
+        }
+
+        System.out.println("Maior: " + maior);
+        System.out.println("Menor: " + menor);
+
+        sc.close();
+    }
+}
