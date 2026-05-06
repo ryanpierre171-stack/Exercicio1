@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Ex7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double valor = sc.nextDouble();
+        int cat = sc.nextInt();
+        double desc = 0;
+
+        if (cat == 1) desc = 0.05;
+        else if (cat == 2) desc = 0.10;
+        else if (cat == 3) desc = 0.15;
+        else {
+            System.out.println("Categoria inválida");
+        }
+
+        double desconto = valor * desc;
+        double finalValor = valor - desconto;
+
+        System.out.println("Desconto: " + desconto);
+        System.out.println("Final: " + finalValor);
+
+        sc.close();
+    }
+}
